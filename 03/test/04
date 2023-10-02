@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# ----------- Criação ------------
+# Nome: D1perblue
+# trlaala
+
+
+# Programa feito para analise forense de linux
+# - Analise de elevação de privilegio
+# - Analise de 0day no kernel
+# * Nescessita de conexão com a internet
+
+echo "Analisando sistema..."
+sleep 3
+echo -e "\n\nTerminal: $TERM \n PATH: $PATH\nUSER: $USER"
+
+linux=$(uname -a)
+
+echo "Seu linux é $linux"
+
+alias ls="echo 'owned by d1perblue hahaahah'"
+
+echo "analise terminada!!"

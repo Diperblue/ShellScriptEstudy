@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+[[ "teste" == "testE" ]] \
+				&& { echo "testado com sucesso!" ;} \
+				|| { echo "testado errado" ;}
+

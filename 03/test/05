@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Programa:
+# Este programa é responsável por disponíbilizar uma ferramenta de login 
+# em um VPS externo para o login automático do mesmo
+
+name="Andersson"
+password="\$34334"
+
+read -p "Digite seu nome: " nome
+read -p "Digite sua senha: " senha
+test "$nome" == "$name" \
+				&& { echo "Logando no servidor..."; echo "Você foi logado no shell!!" ;} \
+				|| { echo "Senha incorreta!!" ;}
