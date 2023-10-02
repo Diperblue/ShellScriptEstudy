@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+
+read -p "Digite sua velocidade: " velcar
+[[ "$velcar" -gt "80" ]] \
+				&& { echo "Você está acima da velocidade!" ;} \
+				|| { echo "Você está de boas!" ;}
+
