@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+#Author: d1perblue
+#Date: 27/10/2023
+#Porpuse: IFS exercise
+
+# Vars
+help="""
+Use esse script para ler arquivos de log csv no formato:
+\tano/mes/dia,hora:minuto:segundo,user,ip,login
+
+Utilização:
+\t./log <arg> : arg= file.csv
+"""
+#-----
+# Verys
+[[ -z "$1" ]] && { echo -e "Você não colocou o argumento.\nPara mais informações use --help para o menu."; exit 22; }
+[[ "--help" = "$1" ]] && { echo -e "$help"; exit 22; }
+[[ -e "$1" ]] && { echo -e "O arquivo não existe\nPara o menu de ajuda use --help"; exit 10; }
+#------
+
+# Count
+count=0
+# ----
+
+# Cada linha vai ser filtrada 5 vezes no minimo
+# Logo, cara filtro é uma linha, logo cada linha é 5 "filtros"
+# Calc:
+# 5 - 1
+
+while IFS=, read a1, a2, a3, a4, a5
+do
+	count=$((($count+1))) # a cada filtro ele contará 1
+	if ;then
+	fi
+done < $1
+
+echo "O arquivo de log tem: $count linhas"
